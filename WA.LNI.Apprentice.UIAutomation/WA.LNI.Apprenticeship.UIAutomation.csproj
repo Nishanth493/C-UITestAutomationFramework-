@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{747A6A5D-2E44-4F5A-9937-EBA99F5546EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WA.LNI.Apprentice.UIAutomation</RootNamespace>
+    <AssemblyName>WA.LNI.Apprentice.UIAutomation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoItX3.Assembly, Version=3.0.0.0, Culture=neutral, PublicKeyToken=a646454c8d475470, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoItX.Dotnet.3.3.14.5\lib\AutoItX3.Assembly.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.1\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions, Version=5.6.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.5.6.0\lib\net45\FluentAssertions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MongoDB.Bson, Version=2.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.7.2\lib\net45\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.7.2\lib\net45\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.7.2\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.10.0\lib\net45\RazorEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RelevantCodes.ExtentReports, Version=1.4.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtentReports.2.41.0\lib\RelevantCodes.ExtentReports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup>
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Action Items\Approaching Step Updates\ActionItems_ApprenticeReadyFor_Step_Updates_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Action Items\Probation Near Completion\ActionItems_ProbationNearingCompletion_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Action Items\Ready for Completion\ActionItems_ReadyForCompletion_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Committee Meeeting Minutes\Meeting_Minute_History_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Committee Meeeting Minutes\Upload_MeetingMinutes_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Lookup Links\Apprentice Lookup_Update\Apprentice_Lookup_Update.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Lookup Links\Apprentice Lookup_Update\Apprentice_LookUp_Details.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Quick Links\Apprentice Registration\AppReg_EnterSSN_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Quick Links\Apprentice Registration\AppReg_Form_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Quick Links\Apprentice Registration\AppReg_Review_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Quick Links\Apprentice Registration\AppReg_Confirmation_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\DashBoard_Overview_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Quick Links\RSI_OJT Reporting\ApprenticeReadyTo_Report_Hours_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Quick Links\Step Update\ApprenticeReadyTo_Step_Update_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Quick Links\Update Journey Level Wages\Update_Journey_Level_Wages_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\~PopUp Windows %28obsolete%29~\QuickStepUpdate_Dialog.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\~PopUp Windows %28obsolete%29~\QuickHoursUpdate_Dialog.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Navigation To Apprenticeship Dashboard\TwoStep_Verification.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Requests\Requests_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Quick Links\Transfer An Apprentice\Transfer_An_Apprentice_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Quick Links\Transfer An Apprentice\Transfer_An_Apprentice_Preview_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Quick Links\Transfer An Apprentice\Transfer_An_Apprentice_Confirmation_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Training Agents\Training_Agents_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Apprentice Info - Affidavit\AffidavitLookup_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Apprentice Info - Affidavit\ApprenticeInformation_Page_internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Apprentice Registration\AppReg_EnterSSN_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Apprentice Registration\AppReg_Form_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Apprentice Search\Apprentice Edit\Edit_ApprenticeInformation_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Apprentice Search\ApprenticeInformationEdit_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Apprentice Search\ApprenticeInformation_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Apprentice Search\ApprenticeStatusChange_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Apprentice Search\SearchApprentice_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Delete Reported Hours\DeleteReportedHours_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\EEOC\EEOCCounties_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Report Hours\ApprenticeReportHoursPostSelection_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Report Hours\ApprenticeReportHours_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Step Update\ApprenticeUpdateStepPostSelection_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Step Update\ApprenticeUpdateStep_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Transfer\TransferApprentice_Page_1_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Apprentice\Transfer\TransferApprentice_Page_2_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\MENU_On_Left_Navigation_Bar\Left_Menu_Nav_Bar.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Program\Create New Program\Program_CreateProgram_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Program\Journey Wage Update\Journey_Wage_Update_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Program\Program Search\Program_Information_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Program\Program Search\Program_Search_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Queue\AC QUEUES\AC_Queues_ApprenticeRegistration_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Queue\AC QUEUES\AC_Queue_ApprenticeTransfer_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Queue\AC QUEUES\Queues_Page_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS INTERNAL\Registration_ARTS_Internal.cs" />
+    <Compile Include="ObjectRepository\ARTS PUBLIC\Apprentice Details\Apprentice_Details_Public_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS PUBLIC\Home\0_ARTS_Home_Public_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS PUBLIC\Home\1_Find_An_Apprentice_Home_Public_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS PUBLIC\Home\2_Find_An_Apprenticeship_Program_By_County_Occupation_Home_Public_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS PUBLIC\Home\3_Find_All_Apprenticeship_Programs_By_Name_Home_Public_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS PUBLIC\Home\4_Find_TrainingAgent_Employer_Home_Public_Page.cs" />
+    <Compile Include="ObjectRepository\ARTS PUBLIC\Program Details\Program_Details_Public_Page.cs" />
+    <Compile Include="ObjectRepository\RegistrationsAndTransfer_creations [Extras]\Registration.cs" />
+    <Compile Include="ObjectRepository\RegistrationsAndTransfer_creations [Extras]\Transfer.cs" />
+    <Compile Include="ObjectRepository\RegistrationsAndTransfer_creations [Extras]\Account_SignUps.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\Regression\Apprentice Ready for Completion\Verify_Ready_for_Completion.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\Regression\Approaching Step Updates\Verify_Approaching_Step_Updates.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\Regression\Probation Nearing Completion\Verify_Probation_Nearing_Completion.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\Regression\Register An Apprentice\Verify_Register_Apprentice.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\Regression\Register An Apprentice\Verify_SSN.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\Regression\Report OJT RSI Hours\Verify_OJT_RSI_Hours_Report.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\Regression\Taining Agent\Verify_Activate_Occupation_For_TA.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\Regression\Taining Agent\Verify_Search_Training_Agent.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\Regression\Transefer An Apprentice\Verify_Apprentice_Transfer.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\Regression\Update Apprentice Steps\Verify_Apprentice_Step_Update.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\Regression\Update Journey Level Wages\Verify_JourneyLevelWages.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\SmokeTest\Smoke_Home_Page.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\SmokeTest\Smoke_Ready_For_Step_Update.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\SmokeTest\Smoke_Probation_Nearing_Completion.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\SmokeTest\Smoke_OJT_RSI_Report_Hours.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\SmokeTest\Smoke_Update_Apprentice_Steps.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\SmokeTest\Smoke_Ready_For_Completion.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\SmokeTest\Smoke_Apprentice_Information.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Integration\SmokeTest\Smoke_Apprentice_Registration.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Pre-Prod\TestBase_PreProd.cs" />
+    <Compile Include="TestCases\ARTS EXTERNAL\Pre-Prod\Transefer An Apprentice\Verify_Apprentice_Transfer.cs" />
+    <Compile Include="TestCases\ARTS INTERNAL\Apprenticeship\Affidavit Lookup\Verify_Affidavit_Lookup.cs" />
+    <Compile Include="TestCases\ARTS INTERNAL\Apprenticeship\Apprentice Registration\Verify_Apprentice_Registration_Internal.cs" />
+    <Compile Include="TestCases\ARTS INTERNAL\Apprenticeship\Apprentice Search\Verify_Apprentice_Information_Internal.cs" />
+    <Compile Include="TestCases\ARTS INTERNAL\Apprenticeship\Reported Hours\Verify_Apprenticeship_Hours_Update_Internal.cs" />
+    <Compile Include="TestCases\ARTS INTERNAL\Apprenticeship\Step Update\Verify_Apprenticeship_Step_Update_Internal.cs" />
+    <Compile Include="TestCases\ARTS INTERNAL\Apprenticeship\Transfer\Verify_Apprentice_Transfer_Internal.cs" />
+    <Compile Include="TestCases\ARTS INTERNAL\Program\Create New Program\Verify_Create_Program.cs" />
+    <Compile Include="TestCases\ARTS INTERNAL\Registration_ARTS_Internal.cs" />
+    <Compile Include="TestCases\ARTS PUBLIC\Verify_RadioBtnSelection_Public.cs" />
+    <Compile Include="TestCases\ARTS PUBLIC\Verify_Apprentice_Information_Public.cs" />
+    <Compile Include="TestCases\TestBase.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Navigation To Apprenticeship Dashboard\LoginPage.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Navigation To Apprenticeship Dashboard\ProgramProfilePage.cs" />
+    <Compile Include="ObjectRepository\ARTS EXTERNAL\Navigation To Apprenticeship Dashboard\LandingPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestCases\DummyTest.cs" />
+    <Compile Include="Utilities\AppRegInfoConstants.cs" />
+    <Compile Include="Utilities\DataConstants.cs" />
+    <Compile Include="Utilities\DBConnection.cs" />
+    <Compile Include="Utilities\EnvConstants.cs" />
+    <Compile Include="Utilities\ExcelReader.cs" />
+    <Compile Include="Utilities\AppTransInfoConstants.cs" />
+    <Compile Include="Utilities\AI_ReadyToStepUpdate.cs" />
+    <Compile Include="Utilities\AI_ProbationNearingCompletion.cs" />
+    <Compile Include="Utilities\QL_OJT_RSI_Hours.cs" />
+    <Compile Include="Utilities\QL_Activate_Occupation_TA.cs" />
+    <Compile Include="Utilities\QL_Update_Journey_Level_Wages.cs" />
+    <Compile Include="Utilities\QL_Step_Update.cs" />
+    <Compile Include="Utilities\TS_Apprentice_Information.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppCommons\" />
+    <Folder Include="AutomationReports\" />
+    <Folder Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Quick Links\Bulk Update Apprentice Hours {Manual}\" />
+    <Folder Include="ObjectRepository\ARTS EXTERNAL\Dashboard Overview\Quick Links\Bulk Update Apprentice Steps {Manual}\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\AC Queue\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Admin\AC Route\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Admin\AC Search\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Admin\Staff\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Apprentice\Apprentoice Recognition Search\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Apprentice\Batch Report Hours\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Apprentice\Batch Report Step\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Apprentice\Update EEOC\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Occupation\Occupation Search\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Program\NewFolder1\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Program\Program Authorize Signer\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Program\Program Committee Member\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Program\Search Meeting Minutes\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Program\Upload Meeting Minutes\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Report\" />
+    <Folder Include="ObjectRepository\ARTS INTERNAL\Training Agent\Training Agent\" />
+    <Folder Include="Reports\ScreenShots\" />
+    <Folder Include="Resources\Configurations\" />
+    <Folder Include="Resources\XMLFiles\" />
+    <Folder Include="TestCases\ARTS INTERNAL\AC Queue\" />
+    <Folder Include="TestCases\ARTS INTERNAL\Apprenticeship\Batch Report  Hours\" />
+    <Folder Include="TestCases\ARTS INTERNAL\Apprenticeship\Batch Report Steps\" />
+    <Folder Include="TestCases\ARTS INTERNAL\Apprenticeship\Delete Reported Hours\" />
+    <Folder Include="TestCases\ARTS INTERNAL\Apprenticeship\EEOC\" />
+    <Folder Include="TestCases\ARTS INTERNAL\Apprenticeship\Upload EEOC\" />
+    <Folder Include="TestCases\ARTS INTERNAL\Program\Journey Wage Update\" />
+    <Folder Include="TestCases\ARTS INTERNAL\Program\Program Apprentice Status Activity\" />
+    <Folder Include="TestCases\ARTS INTERNAL\Program\Program Authorized Signer\" />
+    <Folder Include="TestCases\ARTS INTERNAL\Program\Program Committee Member\" />
+    <Folder Include="TestCases\ARTS INTERNAL\Program\Program Search\" />
+    <Folder Include="TestCases\ARTS INTERNAL\Program\Search Meeting Minutes\" />
+    <Folder Include="TestCases\ARTS INTERNAL\Program\Upload Meeting Minutes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Resources\ExcelFiles\TestData.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="extent-config.xml" />
+    <Content Include="Resources\Drivers\chromedriver.exe" />
+    <Content Include="Resources\Drivers\geckodriver.exe" />
+    <Content Include="Resources\Drivers\IEDriverServer.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WA.LNI.Apprentice.TestFramework\WA.LNI.Apprenticeship.TestFramework.csproj">
+      <Project>{d1181285-efcf-4bab-831b-54fcbc6fac12}</Project>
+      <Name>WA.LNI.Apprenticeship.TestFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.74.0.0\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.74.0.0\build\Selenium.Chrome.WebDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.74.0.0\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.74.0.0\build\Selenium.Chrome.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.74.0.3729.6\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.74.0.3729.6\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.74.0.3729.6\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.74.0.3729.6\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="..\packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets" Condition="Exists('..\packages\AutoItX.Dotnet.3.3.14.5\build\AutoItX.Dotnet.targets')" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

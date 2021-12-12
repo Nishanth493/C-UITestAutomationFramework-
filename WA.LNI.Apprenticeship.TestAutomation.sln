@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WA.LNI.Apprenticeship.UIAutomation", "WA.LNI.Apprentice.UIAutomation\WA.LNI.Apprenticeship.UIAutomation.csproj", "{747A6A5D-2E44-4F5A-9937-EBA99F5546EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WA.LNI.Apprenticeship.TestFramework", "WA.LNI.Apprentice.TestFramework\WA.LNI.Apprenticeship.TestFramework.csproj", "{D1181285-EFCF-4BAB-831B-54FCBC6FAC12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{747A6A5D-2E44-4F5A-9937-EBA99F5546EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{747A6A5D-2E44-4F5A-9937-EBA99F5546EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{747A6A5D-2E44-4F5A-9937-EBA99F5546EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{747A6A5D-2E44-4F5A-9937-EBA99F5546EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1181285-EFCF-4BAB-831B-54FCBC6FAC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1181285-EFCF-4BAB-831B-54FCBC6FAC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1181285-EFCF-4BAB-831B-54FCBC6FAC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1181285-EFCF-4BAB-831B-54FCBC6FAC12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

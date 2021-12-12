@@ -1,0 +1,34 @@
+﻿namespace WA.LNI.Apprentice.UIAutomation.Utilities
+{
+    public enum AppRegInfoConstants
+    {
+        SLNO,
+        TESTCASE,
+        SSN,
+        FIRSTNAME,
+        INITIAL,
+        LASTNAME,
+        SUFFIX,
+        ADDRESS1,
+        ADDRESS2,
+        CITY,
+        STATE,
+        ZIPCODE,
+        APPLICANTPHONE,
+        APPLICANTEMAIL,
+        GENDER,
+        DOB,
+        RACEETHNICITY,
+        ETHNICGROUP,
+        EDUCATION,
+        MILITARY,
+        APPRENTICEOCCUPATION,
+        SUBPROGRAM,
+        LICENSENUMBER,
+        DIRECTENTERY,
+        BEGINDATE,
+        CREDITHOURSOJT,
+        CREDITHOURSRSI,
+        COMMENT
+    }
+}
